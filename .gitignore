@@ -1,0 +1,9 @@
+# ignore the file
+__pycache__/
+*.xlsx
+ICRC_POC.py
+old.py
+test_main.py
+zotu_table_expanded.txt
+test_zotu_gre.txt
+reads_classification.txt
