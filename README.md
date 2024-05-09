@@ -20,8 +20,8 @@ Unix environment, Python 3.12.1
 
 **Example of input file:**
 
-Input is a COI zOTU (OTU) table text file (tab delimited).  
-[test_zotu_table_expanded.txt]
+Input is a COI zOTU table text file (tab delimited).  
+[test_zotu_table.txt](https://github.com/deerhunter4/ICRC/blob/d80efc8d12e3edfc2bc32338dc9efb78153b5d85/test_zotu_table.txt)
 
 OTU_ID | OTU_assignment | Taxonomy | Sequence | Total | GRE2059 | GRE2091 | GRE1351 | GRE0882
 -------|----------------|----------|----------|-------|---------|---------|---------|--------
@@ -30,7 +30,7 @@ Zotu2 | otu1 | Eukaryota(1.00),Arthropoda(1.00),(...) | TATGAATAATTTAAGTT(...) |
 
 **Example of output file:**
 
-Output is [reads_classification.txt] file (tab delimited).  
+[test_zotu_reads_classification.txt](https://github.com/deerhunter4/ICRC/blob/3b87d2cfb3685caed23527a1ed01af1aa2d4fc73/test_zotu_reads_classification.txt) (tab delimited).  
 
 label | GRE2059 | GRE2091 | GRE1351 | GRE0882
 ------|---------|---------|---------|--------
@@ -73,4 +73,3 @@ total | 42240 | 64776 | 43499 | 3605
 * total - this number is taken from oryginal table, so if reads from all other labels do not count to number in this row something went wrong!
 
 *if a label do not have any reads number (even 0) it mean that in any zOTU in any sample/library was fitting this category  
-*
