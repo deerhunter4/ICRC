@@ -1,0 +1,18 @@
+label	GRE2059	GRE2091	GRE1351	GRE0882	GRE2313	GRE2290	GRE1002	GRE2395_Positive_5	GRE1294_Positive_4	GRE2090	GRE1805	GRE1775
+barcode_species	Orthocladius_roussellae(1.00)	Bombus_hyperboreus(1.00)	Tokunagaia_rectangularis(1.00)	Spilogona_dorsata(1.00)	Ochlerotatus_nigripes(0.99)	Lycoriella_flavipeda(1.00)	Ochlerotatus_nigripes(0.92)	Drosophila_yakuba(1.00)	Shelfordella_lateralis(1.00)	Pyla_fusca(1.00)	Ochlerotatus_nigripes(1.00)	Nysius_ericae(0.28)
+barcode	42240	59784	43485	1976	68812	4875	67605	13644	1341	10874	78218	7542
+second_barcode	0	0	0	0	0	0	0	0	0	0	0	0
+satellite_genotypes	0	3415	0	0	5381	0	4322	0	398	0	1097	0
+Wolbachia	0	0	0	1619	0	1091	0	4096	0	1192	0	30
+Rickettsia	0	0	0	0	0	0	0	0	0	0	0	46
+Other_Bacteria												
+Plant	0	65	0	0	24	0	9	0	0	0	0	0
+Fungus	0	0	0	4	0	0	0	0	0	0	0	0
+Mammal	0	0	0	0	14	0	0	0	0	0	0	0
+cross_contaminants	0	447	0	0	0	0	0	0	0	0	0	0
+potential_parasitoid	0	258	0	4	317	41	10	0	12	0	3	0
+wrong_seq_length	0	25	14	2	234	0	691	27	0	0	262	0
+Chimera	0	0	0	0	0	0	0	0	4	0	0	0
+unassigned	0	0	0	0	0	0	0	0	0	0	4	0
+Other	0	782	0	0	0	0	0	0	0	0	0	0
+total	42240	64776	43499	3605	74782	6007	72637	17767	1755	12066	79584	7618
