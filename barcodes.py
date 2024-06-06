@@ -33,6 +33,10 @@ def barcode_species(table, output, barcode_dict):
         if table.loc[barcode_dict[col_name][0], [col_name]].tolist()[0] != 0:
             barcode_species = table.iloc[barcode_dict[col_name][0], 2].split(',')[6]
             output.loc[output['label'] == "barcode_species", [col_name]] = barcode_species
+            output.loc[output['label'] == "zOTU", [col_name]] = table.iloc[barcode_dict[col_name][0], 0]
+            output.loc[output['label'] == "OTU", [col_name]] = table.iloc[barcode_dict[col_name][0], 1]
+            output.loc[output['label'] == "taxonomy", [col_name]] = table.iloc[barcode_dict[col_name][0], 2]
+            output.loc[output['label'] == "sequence", [col_name]] = table.iloc[barcode_dict[col_name][0], 4]
             # print(output.loc[output['label'] == "barcode_species", [col_name]])
         else:
             output.loc[output['label'] == "barcode_species", [col_name]] = "unassigned"
