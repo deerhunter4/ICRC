@@ -16,10 +16,8 @@ def barcodes(proporcional_table):
     proporcional_table_insect = proporcional_table[proporcional_table['label'] != "Bacteria"]
     for col_no in range(6, len(proporcional_table_insect.iloc[1, :])):
         two_max_row_id = proporcional_table_insect.iloc[:, col_no].nlargest(2).index.tolist()
-        print(two_max_row_id)
         barcode_dict[proporcional_table_insect.columns[col_no]] = two_max_row_id
         if proporcional_table.loc[two_max_row_id[0], 'Taxonomy'] != 'unassigned':
-            # print(proporcional_table.iloc[two_max_row_id[0], 2])
             barcode_species = proporcional_table.loc[two_max_row_id[0], 'Taxonomy'].split(',')[5][:-6]  # extract barcode genus name
             barcode_list.append(barcode_species)
 
@@ -41,7 +39,6 @@ def barcode_species(table, proporcional_table, output, barcode_dict):
             output.loc[output['label'] == "taxonomy", [col_name]] = table.iloc[barcode_dict[col_name][0], 2]
             output.loc[output['label'] == "sequence", [col_name]] = table.iloc[barcode_dict[col_name][0], 4]
             output.loc[output['label'] == "barcode_%", [col_name]] = proporcional_table.loc[barcode_dict[col_name][0], [col_name]].tolist()[0]
-            # print(output.loc[output['label'] == "barcode_species", [col_name]])
         else:
             output.loc[output['label'] == "barcode_species", [col_name]] = "unassigned"
             print(output.loc[output['label'] == "barcode_species", [col_name]])

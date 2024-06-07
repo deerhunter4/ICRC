@@ -3,7 +3,7 @@ from args import parameters
 import pandas as pd
 from reads_treshold import reads_treshold
 from labels import labels, labels_to_output
-from output import output_table
+from output import output_table, output_fasta
 from barcodes import proporcional_table, barcodes, barcode_species, barcode_to_output, satellite_genotypes
 from contaminants import contam_and_parasitoids
 
@@ -46,6 +46,9 @@ output = satellite_genotypes(zotu, output, barcode_dict)
 
 # finding cross-contaminants and potential parasitoids
 output = contam_and_parasitoids(zotu, output, barcode_dict, barcode_list)
+
+# save barcodes as FASTA file
+output_fasta(output)
 
 # save output table into CSV file
 # output.to_csv('reads_classification.csv', encoding='utf-8', index=False)
