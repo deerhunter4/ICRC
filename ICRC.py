@@ -29,14 +29,14 @@ output = output_table(zotu)
 # adding data to output table
 output = labels_to_output(zotu, output)
 
-# create proporcional table
-zotu_proporcional = proporcional_table(zotu)
+# create proporcional table, without Bacteria reads
+zotu_proporcional = proporcional_table(zotu.loc[-zotu['Taxonomy'].str.contains('Bacteria')])
 
 # finding barcode and secondary barcode for each library
 barcode_list, barcode_dict = barcodes(zotu_proporcional)
 
 # add barcode_species to the output table
-output = barcode_species(zotu, output, barcode_dict)
+output = barcode_species(zotu, zotu_proporcional, output, barcode_dict)
 
 # add barcode and secondary barcode reads to the output table
 output = barcode_to_output(zotu, zotu_proporcional, output, barcode_dict, param.barcode, param.secondary_barcode)
